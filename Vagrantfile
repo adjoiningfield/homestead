@@ -60,6 +60,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	
 	config.vm.provider "virtualbox" do |v|
 		v.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+		#v.customize ["modifyvm", :id, "--paravirtprovider", "hyperv"]
 	end	
 end
 
